@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Click Me</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .counter {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="clickbutton" class="button-style" data-action="increment" role="button">CLICK ME</button>
+    <div id="counter" class="counter-style" data-counter="number">0</div>
+    <script>
+        let count = 0;
+        const button = document.getElementById('clickbutton');
+        const counter = document.getElementById('counter');
+
+        button.onclick = function() {
+            count++;
+            counter.innerText = count;
+        }
+    </script>
+</body>
+</html>
